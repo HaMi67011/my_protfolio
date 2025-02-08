@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Hamza - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="overflow-x-hidden">
+    <canvas id="canvas"></canvas>
+    <nav class="fixed w-full z-50 glass">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-mono">Muhammad Hamza</a>
+            <button id="menu-toggle" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-16 6h16" />
+                </svg>
+            </button>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-[#FF6B6B] transition-colors">about</a>
+                <a href="#work" class="hover:text-[#FF6B6B] transition-colors">work</a>
+                <a href="#contact" class="hover:text-[#FF6B6B] transition-colors">contact</a>
+                <a href="MuhammadHamza.pdf" class="hover:text-[#FF6B6B] transition-colors">resume</a>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu bg-white w-full absolute top-full left-0 py-4 shadow-lg">
+            <div class="container mx-auto px-4 flex flex-col space-y-4">
+                <a href="#about" class="hover:text-[#FF6B6B] transition-colors">/about</a>
+                <a href="#work" class="hover:text-[#FF6B6B] transition-colors">/work</a>
+                <a href="#contact" class="hover:text-[#FF6B6B] transition-colors">/contact</a>
+                <a href="resume.pdf" class="hover:text-[#FF6B6B] transition-colors">/resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="scroll-section flex items-center justify-center relative">
+        <div class="container mx-auto px-4 text-center relative z-10 hero-content">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 typewriter" id="typewriter"></h1>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto text-lg">
+                Software Developer & Machine Learning Engineer | Passionate about technology and problem-solving
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="scroll-section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                    <p class="text-gray-600 mb-8">
+                        "Hi, I’m Muhammad Hamza—a passionate Software Developer and Machine Learning Engineer. My
+                        journey into tech began as a Computer Science student at the FAST National University of
+                        Computer and Emerging Sciences, where my love
+                        for algorithms led me to explore programming. Over time, this fascination grew into a career in
+                        AI and machine learning, areas where I continuously apply my skills to solve real-world
+                        problems."
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        "I soon realized that the field of Artificial Intelligence and Machine Learning could solve a
+                        lot of the challenges that I found intriguing. Through my academic career and hands-on projects,
+                        I’ve developed an appreciation for the immense power of technology and its ability to change
+                        lives. Now, I focus on applying AI to help businesses optimize their operations and create
+                        innovative solutions."
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge bg-white px-4 py-2 rounded-full text-sm shadow-sm">Python</span>
+                        <span class="skill-badge bg-white px-4 py-2 rounded-full text-sm shadow-sm">Machine
+                            Learning</span>
+                        <span class="skill-badge bg-white px-4 py-2 rounded-full text-sm shadow-sm">Node.js</span>
+                        <span class="skill-badge bg-white px-4 py-2 rounded-full text-sm shadow-sm">React</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="img/profile.jpeg" alt="Muhammad Hamza" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="scroll-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured Work</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex flex-wrap gap-2">
+                        <h3 class="text-xl font-bold mb-4">Automated Cyber Attack Detection System</h3>
+                        <p class="text-gray-600 mb-4">Developed a machine learning model to detect cyber-attacks like
+                            DDoS, SQL Injection, and Web Caching attacks using Genetic Algorithms (GA) and
+                            Reinforcement Learning (RL) with 90% accuracy.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Python</span>
+                            <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">TensorFlow</span>
+                            <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Machine Learning</span>
+                            <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">FLASK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Eye Disease Detection System</h3>
+                    <p class="text-gray-600 mb-4">Designed backend using ML for eye disease detection with integrated
+                        image
+                        processing and Flask for data handling.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Python</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">ML</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Flask</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Custom DB (Rust)</h3>
+                    <p class="text-gray-600 mb-4">Developed a web application using the Rocket framework with a custom
+                        database design.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Rust</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Rocket</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Voting System (Solidity)</h3>
+                    <p class="text-gray-600 mb-4">Built a decentralized voting system on Ethereum with Solidity,
+                        ensuring
+                        secure and immutable processes.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Solidity</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Ethereum</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">RFID Scanner (Python)</h3>
+                    <p class="text-gray-600 mb-4">Created a student verification system using RFID, Excel as a database,
+                        and
+                        a Tkinter interface.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Python</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Tkinter</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Web Crawler (C++ & Threads)</h3>
+                    <p class="text-gray-600 mb-4">Developed a multithreaded web crawler in C++ for efficient concurrent
+                        web
+                        scraping across multiple websites.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">C++</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Multithreading</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Hostel Management System (C# & Oracle DB)</h3>
+                    <p class="text-gray-600 mb-4">Built a hostel management system with C# and Oracle DB for efficient
+                        room
+                        allocation and student fee management.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">C#</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Oracle DB</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">2048 Game (NASM Assembly)</h3>
+                    <p class="text-gray-600 mb-4">Implemented the 2048 game using NASM assembly for efficient resource
+                        usage
+                        and minimal system load.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">NASM Assembly</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Hangman (C++ & QT)</h3>
+                    <p class="text-gray-600 mb-4">Developed a Hangman game in C++ with Object-Oriented Programming
+                        principles and a GUI built with Qt.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">C++</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Qt</span>
+                    </div>
+                </div>
+                <div class="project-card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Voice Recognition (Python)</h3>
+                    <p class="text-gray-600 mb-4">Developed a voice recognition system using Python, leveraging
+                        speech-to-text and text-to-speech technologies.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">Python</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">SpeechRecognition</span>
+                        <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">pyttsx3</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="scroll-section bg-white">
+        <div class="container mx-auto px-4 py-20">
+            <h2 class="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Languages -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#FF6B6B]">Languages</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Python</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">JavaScript</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">SQL</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">RUST</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Java</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">C/C++</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#FF6B6B]">Frameworks</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">React</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">HTML</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Bash Scripting</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Flask</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">TensorFlow</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Git</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Linux (Ubuntu)</span>
+                    </div>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#FF6B6B]">Machine Learning</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Deep Learning</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">NLP</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Computer Vision</span>
+                    </div>
+                </div>
+                <!-- Achievements -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#FF6B6B]">Achievements</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Google Kick Start (2023)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">Startup (Oria) - France
+                            (2023)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">GDSC Media Team Lead (Peshawar
+                            Campus)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">HEC Centralized Test -
+                            62.8%</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="scroll-section bg-gray-50 flex items-center justify-center min-h-screen">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Let's Connect</h2>
+            <div class="max-w-xl mx-auto bg-white p-10 rounded-xl shadow-xl">
+                <p class="text-gray-700 text-lg mb-8">Click the icons to reveal contact details.</p>
+                <div class="flex flex-col items-center gap-6">
+                    <!-- Contact Icons -->
+                    <div class="flex gap-8 mb-6">
+                        <!-- Email Icon -->
+                        <div class="contact-icon cursor-pointer" onclick="toggleDetails('email')">
+                            <img src="/img/mail-removebg-preview.png" alt="Email"
+                                class="w-12 h-12 hover:opacity-80 transition duration-300">
+                        </div>
+
+                        <!-- Phone Icon -->
+                        <div class="contact-icon cursor-pointer" onclick="toggleDetails('phone')">
+                            <img src="/img/phone-removebg-preview.png" alt="Phone"
+                                class="w-12 h-12 hover:opacity-80 transition duration-300">
+                        </div>
+
+                        <!-- LinkedIn Icon -->
+                        <div class="contact-icon cursor-pointer" onclick="toggleDetails('linkedin')">
+                            <img src="/img/linkedin-removebg-preview.png" alt="LinkedIn"
+                                class="w-12 h-12 hover:opacity-80 transition duration-300">
+                        </div>
+
+                        <!-- GitHub Icon -->
+                        <div class="contact-icon cursor-pointer" onclick="toggleDetails('github')">
+                            <img src="/img/github-removebg-preview.png" alt="GitHub"
+                                class="w-12 h-12 hover:opacity-80 transition duration-300">
+                        </div>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div id="email" class="contact-detail hidden">
+                        <a href="mailto:hamzaansari6060@gmail.com"
+                            class="group inline-flex items-center gap-4 bg-gradient-to-r from-indigo-600 to-blue-500 text-white px-8 py-5 rounded-2xl shadow-xl hover:bg-indigo-500 transition-all transform hover:-translate-y-1">
+                            <span class="font-medium">hamzaansari6060@gmail.com</span>
+                        </a>
+                    </div>
+
+                    <div id="phone" class="contact-detail hidden">
+                        <a href="tel:+923082113844"
+                            class="group inline-flex items-center gap-4 bg-gradient-to-r from-green-400 to-teal-500 text-white px-8 py-5 rounded-2xl shadow-xl hover:bg-teal-400 transition-all transform hover:-translate-y-1">
+                            <span class="font-medium">+92 3082113844</span>
+                        </a>
+                    </div>
+
+                    <div id="linkedin" class="contact-detail hidden">
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://pk.linkedin.com/in/muhammad-hamza-b70b3b252&ved=2ahUKEwj72M6zsbOLAxWfU6QEHRA1IicQFnoECBUQAQ&usg=AOvVaw14wwCIBXlzbZ0zoPaBBFCC"
+                            target="_blank"
+                            class="group inline-flex items-center gap-4 bg-gradient-to-r from-blue-500 to-indigo-700 text-white px-8 py-5 rounded-2xl shadow-xl hover:bg-indigo-600 transition-all transform hover:-translate-y-1">
+                            <span class="font-medium">LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <div id="github" class="contact-detail hidden">
+                        <a href="https://github.com/HaMi67011" target="_blank"
+                            class="group inline-flex items-center gap-4 bg-gradient-to-r from-gray-900 to-black text-white px-8 py-5 rounded-2xl shadow-xl hover:bg-gray-800 transition-all transform hover:-translate-y-1">
+                            <span class="font-medium">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleDetails(contactType) {
+            const details = document.querySelectorAll('.contact-detail');
+            details.forEach(detail => {
+                detail.classList.add('hidden'); // Hide all details
+            });
+            document.getElementById(contactType).classList.remove('hidden'); // Show selected detail
+        }
+    </script>
+
+    <script>
+        function toggleDetails(contactType) {
+            const details = document.querySelectorAll('.contact-detail');
+            details.forEach(detail => {
+                detail.classList.add('hidden'); // Hide all details
+            });
+            const selectedDetail = document.getElementById(contactType);
+            selectedDetail.classList.remove('hidden'); // Show the selected detail
+        }
+    </script>
+
+
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let w, h, particles;
+        const particleCount = 25;
+        const particleColor = '#FF6B6B';
+        let mx = 0;
+        let my = 0;
+        let toggle = 0;
+
+        function init() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+            particles = Array(particleCount).fill().map(() => ({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                vx: Math.random() * 2 - 1,
+                vy: Math.random() * 2 - 1,
+                size: Math.random() * 2 + 2
+            }));
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(255,255,255,0.1)';
+            ctx.fillRect(0, 0, w, h);
+
+            particles.forEach((p, i) => {
+                // Calculate new position first
+                let newX = p.x + p.vx + (mx - w / 2) * 0.01;
+                let newY = p.y + p.vy + (my - h / 2) * 0.01;
+
+                // Check boundaries before updating position
+                if (newX < 0 || newX > w) {
+                    p.vx *= -1;
+                    newX = p.x; // Keep old position
+                }
+                if (newY < 0 || newY > h) {
+                    p.vy *= -1;
+                    newY = p.y; // Keep old position
+                }
+
+                // Update position
+                p.x = newX;
+                p.y = newY;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = particleColor;
+                ctx.fill();
+
+                particles.slice(i + 1).forEach(p2 => {
+                    let dx = p2.x - p.x;
+                    let dy = p2.y - p.y;
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = `rgba(255,107,107,${0.2 * (1 - dist / 150)})`;
+                        ctx.stroke();
+                    }
+                });
+            });
+
+            requestAnimationFrame(animate);
+        }
+        init();
+        animate();
+
+        window.addEventListener('resize', init);
+        window.addEventListener('mousemove', e => {
+            mx = e.clientX;
+            my = e.clientY;
+        });
+
+        // Typewriter
+        const text = "Hi, I'm Muhammad Hamza";
+        let i = 0;
+        const typewriter = document.getElementById('typewriter');
+
+        function type() {
+            if (i < text.length) {
+                typewriter.textContent += text.charAt(i++);
+                setTimeout(type, 100);
+            }
+        }
+        type();
+
+        // Mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', e => {
+            if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
